@@ -34,8 +34,12 @@ void PrintArray(string[] array) // выводит массив в консоль
     }
     Console.WriteLine("]");
 }
-string text = "Hello, 2, world, :-)";
+// string text = "Hello, 2, world, :-)";
 // string text = "1234, 1567, -2, computer science"; // проверочный тест
-// string text = "Russia, Denmark, Kazan";// проверочный тест
+string text = "Russia, Denmark, Kazan";// проверочный тест
 string[] separators = new string[] { ", " };
 string[] arr = text.Split(separators, StringSplitOptions.RemoveEmptyEntries); // Введённый текст -> массив строк. Разделение по запятой и пробелу
+
+Console.Write($"[{text}] ->"); // вывод в консоль исходного массива
+string[] fillingtArray = FillingtArray(arr);
+PrintArray(fillingtArray);
