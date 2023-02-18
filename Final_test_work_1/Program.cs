@@ -16,10 +16,21 @@ string[] FillingtArray(string[] arrayString) // заполнение новог�
         if (arrayString[i].Length <= 3) z++;
     }
     string[] resultArray = new string[z];
-    z=0;
+    z = 0;
     for (int i = 0; i < arrayString.Length; i++)
     {
         if (arrayString[i].Length <= 3) resultArray[z++] = arrayString[i];
     }
-return resultArray;
+    return resultArray;
+}
+
+void PrintArray(string[] array) // выводит массив в консоль  
+{
+    Console.Write("[");
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (i < array.Length - 1) Console.Write(array[i] + ", ");
+        else Console.Write(array[i]);
+    }
+    Console.WriteLine("]");
 }
